@@ -1,0 +1,25 @@
+# Lucas Exponentiation test Makefile
+# tests it on MicaZ and Imote2
+# Author/Contact: Panos Kampanakis / pan_kamp@ncsu.edu
+
+#get the timing result
+COMPONENT=testMicaz
+
+##########################################
+#          choose sensor                 #
+##########################################
+
+#MICAz
+CFLAGS+=-DMICA
+PFLAGS+=-I./Serial
+
+###########################################
+#          choose curve parameter         #
+###########################################
+
+CFLAGS+=-DSS512K2
+
+#choose processor frequency (in ECC.h)
+#CFLAGS+=-DMANUALFREQ
+
+include ../Makerules
